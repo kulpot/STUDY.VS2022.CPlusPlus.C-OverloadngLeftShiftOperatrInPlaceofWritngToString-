@@ -2,8 +2,9 @@
 using std::cout;
 using std::endl;
 
-// ---------------------- C++ Operator Overloading Intro -------------------------------
-//ref link:https://www.youtube.com/watch?v=IfdakFjYxEg&list=PLRwVmtr-pp077ESC0tAC331LxLaDa5A57
+// -------------------- C++OverloadngLeftShiftOperatrInPlaceofWritngToString() ---------------------------------
+//ref link:https://www.youtube.com/watch?v=1coNjTrOs7w&list=PLRwVmtr-pp077ESC0tAC331LxLaDa5A57&index=3
+
 
 struct Vector		// algebra/trigonometry knowledge required
 {
@@ -33,6 +34,67 @@ void main()
 	result = operator+(v1, v2);
 	cout << result.x << " " << result.y << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------- C++ Operator Overloading Intro -------------------------------
+//ref link:https://www.youtube.com/watch?v=IfdakFjYxEg&list=PLRwVmtr-pp077ESC0tAC331LxLaDa5A57
+
+//struct Vector		// algebra/trigonometry knowledge required
+//{
+//	int x;			// Notice:float is default type for vector
+//	int y;
+//};
+//
+//Vector operator+(const Vector& left, const Vector& right)
+//{
+//	Vector ret;
+//	ret.x = left.x + right.x;
+//	ret.y = left.y + right.y;
+//	return ret;
+//}
+//
+//void main()
+//{
+//	Vector v1;
+//	v1.x = 2; v1.y = 3;
+//	Vector v2;
+//	v2.x = 1; v2.y = 4;
+//	Vector result;
+//	//result.x = v1.x + v2.x;
+//	//result.y = v1.y + v2.y;
+//
+//	result = v1 + v2;		// operator+ syntax required for error
+//	result = operator+(v1, v2);
+//	cout << result.x << " " << result.y << endl;
+//}
 
 //######################################
 
