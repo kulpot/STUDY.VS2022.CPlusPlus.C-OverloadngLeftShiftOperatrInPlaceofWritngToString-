@@ -1,10 +1,12 @@
 #include <iostream>
-using std::cout;
+using std::cout;	// cout: is an output stream, sending data out the console
 using std::endl;
 
 // -------------------- C++OverloadngLeftShiftOperatrInPlaceofWritngToString() ---------------------------------
 //ref link:https://www.youtube.com/watch?v=1coNjTrOs7w&list=PLRwVmtr-pp077ESC0tAC331LxLaDa5A57&index=3
 
+// << is called stream insertion operator
+// cout: is an output stream, sending data out the console
 
 struct Vector		// algebra/trigonometry knowledge required
 {
@@ -21,10 +23,19 @@ Vector operator+(const Vector& left, const Vector& right)
 	return ret;
 }
 
+//void operator<<(std::ostream& stream, const Vector& right)		//Parameters - 1st argument: cout ostream ref, 2nd argument: const ref Vector <-- vector modify not use
+std::ostream& operator<<(std::ostream& stream, const Vector& right)		
+{
+	cout << "{" << right.x << ", " << right.y << "}";	// error notice:must copy data for each vector into the stream object like so? -> stream << "{" << right.X << ", " << etc.....  its not modifying the stream object created at all but are just calling 'cout' from within the method.
+	return stream;	// void must be std::ostream&
+}
+
 void main()
 {
 	Vector first(1, 2), second(3, 4);
 	Vector result = first + second;		// + is operator+
+	//cout << result << endl;		//error:needs return stream // "<<"(stream insertion operator) needs overloading //cout << endl;	- cout return result in its place
+	cout << first << " + " << second << " = " << result << endl;
 }
 
 
