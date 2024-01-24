@@ -24,7 +24,7 @@ Vector operator+(const Vector& left, const Vector& right)
 void main()
 {
 	Vector first(1, 2), second(3, 4);
-	Vector result = first + second;
+	Vector result = first + second;		// + is operator+
 }
 
 
