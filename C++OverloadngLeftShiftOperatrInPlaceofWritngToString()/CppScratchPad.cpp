@@ -23,17 +23,8 @@ Vector operator+(const Vector& left, const Vector& right)
 
 void main()
 {
-	Vector v1;
-	v1.x = 2; v1.y = 3;
-	Vector v2;
-	v2.x = 1; v2.y = 4;
-	Vector result;
-	//result.x = v1.x + v2.x;
-	//result.y = v1.y + v2.y;
-
-	result = v1 + v2;		// operator+ syntax required for error
-	result = operator+(v1, v2);
-	cout << result.x << " " << result.y << endl;
+	Vector first(1, 2), second(3, 4);
+	Vector result = first + second;
 }
 
 
