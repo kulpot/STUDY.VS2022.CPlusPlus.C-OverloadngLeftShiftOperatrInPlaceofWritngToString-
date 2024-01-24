@@ -10,6 +10,7 @@ struct Vector		// algebra/trigonometry knowledge required
 {
 	int x;			// Notice:float is default type for vector
 	int y;
+	Vector(int x = 0, int y = 0) : x(x), y(y) {}
 };
 
 Vector operator+(const Vector& left, const Vector& right)
